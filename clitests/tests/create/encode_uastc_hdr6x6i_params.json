@@ -6,15 +6,16 @@
     "outputs": {
         "output/create/encode_uastc_hdr6x6i_params/output_${subcase}_${select[id]}.ktx2": "golden/create/encode_uastc_hdr6x6i_params/output_${subcase}_${select[id]}.ktx2"
     },
+    "comment": "level12 differs on Windows c/f Linux & macOS for all compmilers except gcc. The difference is VERY large.",
     "args": {
         "select": [
-            { "id": "lambda", "tolerance": "0.08", "args": "--uastc-hdr-lambda 1000" },
-            { "id": "level_0", "tolerance": "0.08", "args": "--uastc-hdr-6x6i-level 0" },
-            { "id": "level_2", "tolerance": "0.08", "args": "--uastc-hdr-6x6i-level 2" },
-            { "id": "level_4", "tolerance": "0.08", "args": "--uastc-hdr-6x6i-level 4" },
-            { "id": "level_12", "tolerance": "1.00", "args": "--uastc-hdr-6x6i-level 12" },
-            { "id": "combination_1", "tolerance": "0.08", "args": "--uastc-hdr-6x6i-level 0 --uastc-hdr-lambda 2000" },
-            { "id": "combination_2", "tolerance": "0.08", "args": "--uastc-hdr-6x6i-level 3 --uastc-hdr-lambda 5000" }
+            { "id": "lambda", "tolerance": "0.00", "args": "--uastc-hdr-lambda 1000" },
+            { "id": "level_0", "tolerance": "0.00", "args": "--uastc-hdr-6x6i-level 0" },
+            { "id": "level_2", "tolerance": "0.00", "args": "--uastc-hdr-6x6i-level 2" },
+            { "id": "level_4", "tolerance": "0.00", "args": "--uastc-hdr-6x6i-level 4" },
+            { "id": "level_12", "tolerance": "0.57", "args": "--uastc-hdr-6x6i-level 12" },
+            { "id": "combination_1", "tolerance": "0.00", "args": "--uastc-hdr-6x6i-level 0 --uastc-hdr-lambda 2000" },
+            { "id": "combination_2", "tolerance": "0.00", "args": "--uastc-hdr-6x6i-level 3 --uastc-hdr-lambda 5000" }
         ],
         "subcase": [
             "R16G16B16_SFLOAT",
