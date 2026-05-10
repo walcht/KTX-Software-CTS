@@ -8,8 +8,9 @@ Usage:
                         are matching the VkFormats without the VK_FORMAT_ prefix. The VK_FORMAT_ 
                         prefix is ignored if present.
                         It can't be used with --codec.
-                        The value must be an ASTC format. When specified the ASTC encoder specific 
-                        options becomes valid. Case insensitive.
+                        The value must be an ASTC or a BCn format. If an ASTC format is specified, 
+                        the ASTC encoder specific options becomes valid. Likewise for BCn formats. 
+                        Case insensitive.
       --codec <target>  Target codec. With each encoding option the encoder specific options become 
                         valid, otherwise they are ignored. Case-insensitive.
                         Possible options are: basis-lz | uastc | uastc-ldr-4x4 | uastc-hdr-4x4 | 
@@ -52,6 +53,20 @@ Usage:
                               error. This aims to improve perceived image quality, but typically 
                               lowers the measured PSNR score. Perceptual methods are currently only 
                               available for normal maps and RGB color data.
+
+ Encode BCn options:
+      --bc1-quality <level>  The quality level configures the quality-performance tradeoff for 
+                             BC1/BC3 encoder. Default is 'medium'. The quality level can be set 
+                             between fastest (0) and exhaustive (19) via the following fixed 
+                             quality presets:
+
+                                 Level      |  Quality
+                                 ---------- | -----------------------------
+                                 fastest    | (equivalent to quality =   0)
+                                 fast       | (equivalent to quality =   5)
+                                 medium     | (equivalent to quality =  10)
+                                 thorough   | (equivalent to quality =  15)
+                                 exhaustive | (equivalent to quality =  19)
 
  Encode BasisLZ options:
       --clevel <level>          BasisLZ compression level, an encoding speed vs. quality level 
