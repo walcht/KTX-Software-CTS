@@ -55,6 +55,7 @@ Usage:
                               available for normal maps and RGB color data.
 
  Encode BCn options:
+      --bc1-mode <level>     TODO..
       --bc1-quality <level>  The quality level configures the quality-performance tradeoff for 
                              BC1/BC3 encoder. Default is 'medium'. The quality level can be set 
                              between fastest (0) and exhaustive (19) via the following fixed 

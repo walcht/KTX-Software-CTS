@@ -20,7 +20,7 @@ Usage:
                                     R16G16B16_SFLOAT
                                     R16G16B16A16_SFLOAT
                                 If the format is an ASTC format the ASTC encoder specific options 
-                                become valid, otherwise they are ignored.
+                                become valid, otherwise they are ignored. Likewise for a BCn format.
                                 The format will be used to verify and load all input files into a 
                                 texture before encoding. Case insensitive. Required.
       --1d                      Create a 1D texture. If not set the texture will be a 2D or 3D 
@@ -191,6 +191,21 @@ Usage:
                               error. This aims to improve perceived image quality, but typically 
                               lowers the measured PSNR score. Perceptual methods are currently only 
                               available for normal maps and RGB color data.
+
+ Encode BCn options:
+      --bc1-mode <level>     TODO..
+      --bc1-quality <level>  The quality level configures the quality-performance tradeoff for 
+                             BC1/BC3 encoder. Default is 'medium'. The quality level can be set 
+                             between fastest (0) and exhaustive (19) via the following fixed 
+                             quality presets:
+
+                                 Level      |  Quality
+                                 ---------- | -----------------------------
+                                 fastest    | (equivalent to quality =   0)
+                                 fast       | (equivalent to quality =   5)
+                                 medium     | (equivalent to quality =  10)
+                                 thorough   | (equivalent to quality =  15)
+                                 exhaustive | (equivalent to quality =  19)
 
  Encode BasisLZ options:
       --clevel <level>          BasisLZ compression level, an encoding speed vs. quality level 
