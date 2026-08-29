@@ -58,8 +58,8 @@ Usage:
 
  Encode BCn options:
       --bcn-quality <level>     The quality level configures the quality-performance tradeoff for 
-                                BC1, BC3, and BC7 encoders. Can also be set via the following 
-                                presets for BC1/BC3 (range [0,19]):
+                                BC1, BC3, and BC7 encoders. For BC1/BC3, range is [0,19]. For BC7, 
+                                one of the following presets has to be supplied:
 
                                     Level      |  Quality (only for BC1/BC3)
                                     ---------- | ----------------------------
@@ -69,17 +69,6 @@ Usage:
                                     medium     | (equivalent to quality = 10)
                                     thorough   | (equivalent to quality = 15)
                                     exhaustive | (equivalent to quality = 19)
-
-                                And for BC7 (OR'ed flags):
-
-                                    Level      |  OR'ed flags (only for BC7)
-                                    ---------- | ----------------------------
-                                    fastest    | (equivalent to flags =  128)
-                                    faster     | (equivalent to flags =  176)
-                                    fast       | (equivalent to flags =  179)
-                                    medium     | (equivalent to flags =  255)
-                                    thorough   | (equivalent to flags = 1023)
-                                    exhaustive | (equivalent to flags = 3967)
 
                                 Default is 'thorough'. Note on BC1 vs. BC3 vs. BC7: apart from 
                                 lower VRAM consumption (4bpp vs. 8bpp) and better GPU texture cache 
